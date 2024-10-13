@@ -14,11 +14,30 @@ Put the following local script in either `StarterGUI` or `StarterPlayerScripts`.
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Oak = require(ReplicatedStorage.Oak)
 
+local CounterButton = Oak.component(function(props)
+    local count, setCount = Oak.useState(0)
+
+    return Oak.Child("Frame", {}, {
+        Oak.child("TextLabel", { Text = `Count: {count()}` }),
+        Oak.child("TextButton", { Text = "Increase Count", unpack(props.Button) })
+    })
+end)
+
 local GUI = Oak.new(function()
-	return Oak.child("TextLabel", {text = "Hello World"})
+	return {
+        Oak.child("TextLabel", { text = "Hello World" }),
+        CounterButton({ Button.Styles.BackgroundColor = Color3.new(255, 0, 0) })
+    }
 end)
 
 GUI.root.Name = "HelloWorldGUI"
 GUI.root.Parent = game.Players.LocalPlayer.PlayerGui
 ```
 
+Creating UI with Oak revolves around 3 main concepts.
+
+`Oak.new()` is used to create a new Oak instance. When called, a ScreenGUI element refered to as `root` will be created. The `Oak.Child()` returned will be parented to this element.
+
+`Oak.child()` is used to create a child element. It takes in 3 props: elementType, properties, and childern.
+
+`Oak.component()` is similar to `Oak.new()`, and creates a new Oak instance. It does not contain a root though, and is treated as a child element.

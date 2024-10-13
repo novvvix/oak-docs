@@ -3,8 +3,22 @@ title: 'Quickstart'
 description: 'Start building with Oak'
 ---
 
-## Importing Oak
-
+### Importing Oak
 To use Oak, you can either add the Roblox Package to your game, download the source code on Github, or use a package manager like Wally.
 
 Once added, Oak should be placed in `ReplicatedStorage` or your `Shared` folder.
+
+### Using Oak
+Put the following local script in either `StarterGUI` or `StarterPlayerScripts`.
+```lua
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Oak = require(ReplicatedStorage.Oak)
+
+local GUI = Oak.new(function()
+	return Oak.child("TextLabel", {text = "Hello World"})
+end)
+
+GUI.root.Name = "HelloWorldGUI"
+GUI.root.Parent = game.Players.LocalPlayer.PlayerGui
+```
+

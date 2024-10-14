@@ -58,6 +58,13 @@
       ]
     },
     {
+        "group": "Plugins",
+        "pages": [
+            "rowind",
+            "romotion"
+        ]
+    }
+    {
       "group": "Essentials",
       "pages": [
         "essentials/markdown",

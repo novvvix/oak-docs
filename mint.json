@@ -61,6 +61,10 @@
         "group": "Plugins",
         "pages": [
             "rowind",
+            {
+                "group": "Layout",
+                "pages": ["aspect", "z"]
+            },
             "romotion"
         ]
     },

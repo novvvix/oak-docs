@@ -67,7 +67,47 @@
                     {
                         "group": "Layout",
                         "pages": ["aspect", "z"]
-                    }
+                    },
+                    {
+                        "group": "Flexbox & Grid",
+                        "pages": []
+                    },
+                    {
+                        "group": "Spacing",
+                        "pages": []
+                    },
+                    {
+                        "group": "Sizing",
+                        "pages": []
+                    },
+                    {
+                        "group": "Typography",
+                        "pages": []
+                    },
+                    {
+                        "group": "Backgrounds",
+                        "pages": []
+                    },
+                    {
+                        "group": "Borders",
+                        "pages": []
+                    },
+                    {
+                        "group": "Effects",
+                        "pages": []
+                    },
+                    {
+                        "group": "Filters",
+                        "pages": []
+                    },
+                    {
+                        "group": "Transitions",
+                        "pages": []
+                    },
+                    {
+                        "group": "Transforms",
+                        "pages": []
+                    },
                 ]
             },
             "romotion"

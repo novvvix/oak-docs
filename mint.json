@@ -60,10 +60,15 @@
     {
         "group": "Plugins",
         "pages": [
-            "rowind",
             {
-                "group": "Layout",
-                "pages": ["aspect", "z"]
+                "group": "Rowind",
+                "pages": [
+                    "rowind",
+                    {
+                        "group": "Layout",
+                        "pages": ["aspect", "z"]
+                    }
+                ]
             },
             "romotion"
         ]
